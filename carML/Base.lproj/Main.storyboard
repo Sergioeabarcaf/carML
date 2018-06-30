@@ -52,7 +52,6 @@
                         <constraints>
                             <constraint firstItem="Jmy-u6-l1D" firstAttribute="top" secondItem="tpb-2p-1vc" secondAttribute="bottom" constant="30" id="12P-rO-i7Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jmy-u6-l1D" secondAttribute="bottom" constant="50" id="1xt-Ez-NXc"/>
-                            <constraint firstItem="tpb-2p-1vc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Am9-t7-Hxn"/>
                             <constraint firstItem="gbV-nG-ZY7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="CBU-tn-fHY"/>
                             <constraint firstAttribute="trailing" secondItem="tpb-2p-1vc" secondAttribute="trailing" constant="10" id="Ve1-a3-mzn"/>
                             <constraint firstItem="tpb-2p-1vc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="css-Pr-Z6n"/>
