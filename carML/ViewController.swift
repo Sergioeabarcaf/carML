@@ -18,10 +18,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var kmsLabel: UILabel!
     @IBOutlet weak var valuePredictedLabel: UILabel!
     
+    let cars = Cars()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.stackView.setCustomSpacing(70, after: self.statusSegmentController)
+        
+        self.calculateValue()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +34,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateValue() {
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 0
+        
+        let formattedKms = formatter.string(for: self.kmsSliderController.value) ?? "0"
+        self.kmsLabel.text = "Kilometraje: \(formattedKms)"
+        
     }
     
 }
