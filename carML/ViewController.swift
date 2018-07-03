@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var modelSegmentController: UISegmentedControl!
     @IBOutlet weak var extrasSwitchController: UISwitch!
     @IBOutlet weak var kmsSliderController: UISlider!
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.stackView.setCustomSpacing(70, after: self.statusSegmentController)
     }
 
     override func didReceiveMemoryWarning() {
