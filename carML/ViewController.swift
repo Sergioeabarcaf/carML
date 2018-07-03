@@ -42,6 +42,18 @@ class ViewController: UIViewController {
         let formattedKms = formatter.string(for: self.kmsSliderController.value) ?? "0"
         self.kmsLabel.text = "Kilometraje: \(formattedKms)"
         
+        if let prediction = try? self.cars.prediction(modelo: Double(self.modelSegmentController.selectedSegmentIndex), extras: Double(self.extrasSwitchController.isOn ? Double(1.0) : Double(0.0)), kilometraje: Double(self.kmsSliderController.value), estado: Double(self.statusSegmentController.selectedSegmentIndex)){
+            
+            let clampValue = max(500, prediction.precio)
+            
+            formatter.numberStyle = .currency
+            self.valuePredictedLabel.text = formatter.string(for: clampValue)
+        }
+        else{
+            self.valuePredictedLabel.text = "Error"
+        }
+        
+
     }
     
 }
